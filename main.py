@@ -5,6 +5,7 @@ url = ""
 print("ENTER YOUR URL FROM displate.com")
 url = str(input(""))
 
+
 page = requests.get(url)
 
 if page.status_code != 200:

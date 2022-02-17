@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 import requests
+import os
 
 url = ""
 print("ENTER YOUR URL FROM displate.com")
@@ -43,7 +44,10 @@ save_name = img_url[index:]
 
 print("Save as "+save_name)
 
-out = open("out_img"+save_name, "wb")
+if not os.path.isdir("out_imgs"):
+     os.mkdir("out_imgs")
+
+out = open("out_imgs"+save_name, "wb")
 
 out.write(p.content)
 

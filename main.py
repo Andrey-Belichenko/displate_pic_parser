@@ -47,6 +47,7 @@ print("Save as "+save_name)
 if not os.path.isdir("out_imgs"):
      os.mkdir("out_imgs")
 
+
 out = open("out_imgs"+save_name, "wb")
 
 out.write(p.content)
